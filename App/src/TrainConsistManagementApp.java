@@ -3,7 +3,8 @@ import java.util.List;
 
 public class TrainConsistManagementApp {
 
-    public static void main(String[] args) {
+    public static void main(String[] args)
+    {
         // Welcome message
         System.out.println("=== Train Consist Management App ===");
 
