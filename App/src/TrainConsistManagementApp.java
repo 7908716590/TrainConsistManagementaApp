@@ -1,20 +1,25 @@
-import java.util.ArrayList;
-import java.util.List;
+import java.util.HashSet;
+import java.util.Set;
 
-public class TrainConsistManagementApp {
+public class TrainConsistAppUC3 {
 
-    public static void main(String[] args)
-    {
-        // Welcome message
-        System.out.println("=== Train Consist Management App ===");
+    public static void main(String[] args) {
+        System.out.println("=== Train Consist Management App: UC3 ===");
 
-        // Initialize an empty list of bogies
-        List<String> trainConsist = new ArrayList<>();
+        // Initialize HashSet for bogie IDs
+        Set<String> bogieIDs = new HashSet<>();
 
-        // Display initial bogie count
-        System.out.println("Initial bogie count: " + trainConsist.size());
+        // Add bogie IDs (including duplicates intentionally)
+        bogieIDs.add("BG101");
+        bogieIDs.add("BG102");
+        bogieIDs.add("BG103");
+        bogieIDs.add("BG101"); // duplicate
+        bogieIDs.add("BG102"); // duplicate
 
-        // Program continues
-        System.out.println("Train consist initialized successfully.");
+        // Display unique bogie IDs
+        System.out.println("Unique bogie IDs in train consist:");
+        System.out.println(bogieIDs);
+
+        System.out.println("Bogie ID uniqueness enforced successfully.");
     }
 }
