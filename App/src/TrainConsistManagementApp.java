@@ -1,20 +1,30 @@
+feature/UC6-MapBoogietoCapacity
+import java.util.HashMap;
+import java.util.Map;
 feature/UC5-PreserveInsertionOrder
 import java.util.LinkedHashSet;
 import java.util.Set;
+ main
 
-public class TrainConsistAppUC5 {
+public class TrainConsistAppUC6 {
 
     public static void main(String[] args) {
-        System.out.println("=== Train Consist Management App: UC5 ===");
+        System.out.println("=== Train Consist Management App: UC6 ===");
 
-        // Initialize LinkedHashSet for train formation
-        Set<String> trainFormation = new LinkedHashSet<>();
+        // Initialize HashMap to store bogie-capacity mapping
+        Map<String, Integer> bogieCapacityMap = new HashMap<>();
 
-        // Attach bogies
-        trainFormation.add("Engine");
-        trainFormation.add("Sleeper");
-        trainFormation.add("Cargo");
-        trainFormation.add("Guard");
+        // Add bogies with their capacities
+        bogieCapacityMap.put("Sleeper", 72);
+        bogieCapacityMap.put("AC Chair", 54);
+        bogieCapacityMap.put("First Class", 36);
+
+ feature/UC6-MapBoogietoCapacity
+        // Iterate over map and display each bogie and its capacity
+        System.out.println("Bogie capacities:");
+        for (Map.Entry<String, Integer> entry : bogieCapacityMap.entrySet()) {
+            System.out.println(entry.getKey() + " → Capacity: " + entry.getValue());
+        }
 
         // Attempt to attach duplicate bogie
         trainFormation.add("Sleeper"); // duplicate, will be ignored
@@ -118,5 +128,6 @@ public class TrainConsistAppUC2 {
 main
  main
   main
+ main
     }
 }
