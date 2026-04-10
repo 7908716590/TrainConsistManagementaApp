@@ -9,6 +9,7 @@ public class Bogie {
         this.capacity = capacity;
     }
 
+
     public String getName() {
         return name;
     }
