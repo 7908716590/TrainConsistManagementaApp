@@ -1,12 +1,17 @@
 package main;
 
 public class Bogie {
-    String type;
-    int capacity;
+    private String name;
+    private int capacity;
 
-    public Bogie(String type, int capacity) {
-        this.type = type;
+    public Bogie(String name, int capacity) {
+        this.name = name;
         this.capacity = capacity;
+    }
+
+
+    public String getName() {
+        return name;
     }
 
     public int getCapacity() {
@@ -15,6 +20,6 @@ public class Bogie {
 
     @Override
     public String toString() {
-        return "Bogie Type: " + type + ", Capacity: " + capacity;
+        return name + " (Capacity: " + capacity + ")";
     }
 }
